@@ -8,7 +8,7 @@ duree = 0.005    # Durée de l'affichage (5 ms)
 
 # Paramètres du CAN
 bits = 8
-pleine_echelle = 5.0 # 5V au total (supposé de -2.5V à +2.5V)
+pleine_echelle = 5.0
 niveaux = 2**bits
 quantum = pleine_echelle / (niveaux - 1)
 
@@ -24,7 +24,7 @@ def conversion_can(signal):
 t_continu = np.linspace(0, duree, 1000)
 signal_continu = amplitude * np.sin(2 * np.pi * f_signal * t_continu)
 
-# Échantillonnage aux différentes fréquences
+# Affichage des échantillonnages aux différentes fréquences
 f_ech_list = [2000, 3000, 5000]
 couleurs = ['r', 'g', 'g']
 titres = [
